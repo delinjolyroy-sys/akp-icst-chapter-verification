@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ICST Chapter Membership Verification</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background: #f2f2f2;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+.container {
+    max-width: 500px;
+    margin: 40px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+h1 {
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.status {
+    color: green;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.info {
+    text-align: left;
+    margin-top: 25px;
+    line-height: 1.8;
+}
+
+.label {
+    font-weight: bold;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>ICST CHAPTER</h1>
+
+    <div class="subtitle">
+        Membership Verification
+    </div>
+
+    <div class="status">
+        ✓ LEGIT MEMBER
+    </div>
+
+    <div class="info">
+
+        <div>
+            <span class="label">Name:</span>
+            <span id="name">—</span>
+        </div>
+
+        <div>
+            <span class="label">Position:</span>
+            <span id="position">—</span>
+        </div>
+
+        <div>
+            <span class="label">Membership ID No.:</span>
+            <span id="membership">—</span>
+        </div>
+
+        <div>
+            <span class="label">Date Survive:</span>
+            <span id="date">—</span>
+        </div>
+
+        <div>
+            <span class="label">Status:</span>
+            <span>Legit Member</span>
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+const params = new URLSearchParams(window.location.search);
+
+document.getElementById("name").textContent =
+    params.get("name") || "—";
+
+document.getElementById("position").textContent =
+    params.get("position") || "—";
+
+document.getElementById("membership").textContent =
+    params.get("id") || "—";
+
+document.getElementById("date").textContent =
+    params.get("date") || "—";
+</script>
+
+</body>
+      </html>
